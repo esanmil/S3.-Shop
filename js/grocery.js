@@ -84,7 +84,8 @@ function addToCartList(id) {
 
 // Exercise 2
 function cleanCart() {
-   
+    cartList.length = 0; 
+
 }
 
 // Exercise 3
