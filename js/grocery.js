@@ -111,7 +111,10 @@ function calculateSubtotals() {
 // Exercise 4
 function calculateTotal() {
     // Calculate total price of the cart either using the "cartList" array
- 
+    for(var i = 0; i < cartList.length; i++ ){
+        total += cartList[i].price;
+    }
+
 }
 
 // Exercise 5
