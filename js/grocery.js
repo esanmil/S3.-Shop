@@ -70,6 +70,7 @@ function addToCartList(id) {
 
   
     // 1. Loop for to the array products to get the item to add to cart
+    // 2. Add found product to the cartList array
 
     for (var i = 0; i < products.length; i++) {
         if (id == i + 1) {
@@ -78,7 +79,7 @@ function addToCartList(id) {
     }
     console.log(cartList);
 }
-    // 2. Add found product to the cartList array
+   
 
 
 // Exercise 2
@@ -89,7 +90,6 @@ function cleanCart() {
 // Exercise 3
 function calculateSubtotals() {
     // 1. Create a for loop on the "cartList" array 
- 
     // 2. Implement inside the loop an if...else or switch...case to add the quantities of each type of product, obtaining the subtotals: subtotalGrocery, subtotalBeauty and subtotalClothes
 }
 
