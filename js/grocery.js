@@ -156,6 +156,22 @@ function applyPromotionsSubtotals() {
 // Exercise 6
 function generateCart() {
     // Using the "cartlist" array that contains all the items in the shopping cart, 
+    for (var i = 0; i< cartList.length; i++){
+        if( cart[cartList[i].name] == null){
+            cart[cartList[i].name] ={
+                name: cartList[i].name,
+                price: cartList[i].price,
+                type: cartList[i].type,
+                quantity: 1,
+                subtotal: cartList[i].price,
+                subtotalWithDiscount: cartList[i].price
+              }
+        }
+        else {
+            cart[cartList[i].name].quantity ++;
+            cart[cartList[i].name].subtotal += cart[cartList[i].name].price
+        }
+    }
     // generate the "cart" array that does not contain repeated items, instead each item of this array "cart" shows the quantity of product.
 }
 
