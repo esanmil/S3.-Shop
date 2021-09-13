@@ -115,10 +115,41 @@ function calculateTotal() {
         total += cartList[i].price;
     }
 
+    console.log (total);
+
 }
 
 // Exercise 5
 function applyPromotionsSubtotals() {
+    var aceite = 0;
+    var mezcla = 0;
+    var descuento;
+
+    for(var i = 0; i < cartList.length; i++ ){
+        if (cartList[i].name == 'cooking oil'){
+            aceite ++;
+        }
+
+        if (cartList[i].name == 'Instant cupcake mixture'){
+            mezcla ++;
+        }
+    }
+    
+    if (aceite >=3){
+        descuento = .5 * aceite;
+        total -= descuento;
+        subtotal['grocery'].discount = descuento;
+        console.log('Grocery oil discount ' + total)
+
+    }
+
+    if (mezcla >=10){
+        descuento = mezcla * (2/3);
+        total -= descuento;
+        subtotal['grocery'].discount = descuento;
+        console.log('Grocery Cupcake mixture discount ' + total)
+    }
+
   
 }
 
